@@ -1,0 +1,6 @@
+{
+    "/currency/*": {
+        "target": "http://localhost:8090/currency",
+        "secure": false
+    } 
+}

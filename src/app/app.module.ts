@@ -8,6 +8,9 @@ import { RegistrationComponent } from './registration/registration.component';
 import { CurrencyComponent } from './user-details/currency/currency.component';
 import { CurrencydetailsComponent } from './user-details/currency/currencydetails/currencydetails.component';
 import { CurrencyhistoryComponent } from './user-details/currency/currencyhistory/currencyhistory.component';
+import { AppRoutingModule } from './app.routing.module';
+import { UserServiceService } from './user-service.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,9 +23,11 @@ import { CurrencyhistoryComponent } from './user-details/currency/currencyhistor
     CurrencyhistoryComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [UserServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
